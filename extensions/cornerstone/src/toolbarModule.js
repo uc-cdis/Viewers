@@ -215,7 +215,7 @@ const definitions = [
         commandName: 'setToolActive',
         commandOptions: { toolName: 'Bidirectional' },
       },
-      {
+      /*{
         id: 'Download',
         label: 'Download',
         icon: 'create-screen-capture',
@@ -225,7 +225,7 @@ const definitions = [
           behavior: TOOLBAR_BUTTON_BEHAVIORS.DOWNLOAD_SCREEN_SHOT,
           togglable: true,
         },
-      },
+      },*/
     ],
   },
   {

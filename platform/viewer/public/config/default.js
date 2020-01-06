@@ -1,10 +1,10 @@
 window.config = {
   // default: '/'
-  routerBasename: '/',
+  routerBasename: '/dicom-viewer/',
   extensions: [],
-  showStudyList: true,
+  showStudyList: false,
   filterQueryParam: false,
-  disableServersCache: false,
+  disableServersCache: true,
   studyPrefetcher: {
     enabled: true,
     order: 'closest',
@@ -15,20 +15,43 @@ window.config = {
     displayProgress: true,
     includeActiveDisplaySet: true,
   },
+  disableMeasurementPanel: false,
   servers: {
     dicomWeb: [
       {
-        name: 'DCM4CHEE',
-        wadoUriRoot: 'https://server.dcmjs.org/dcm4chee-arc/aets/DCM4CHEE/wado',
-        qidoRoot: 'https://server.dcmjs.org/dcm4chee-arc/aets/DCM4CHEE/rs',
-        wadoRoot: 'https://server.dcmjs.org/dcm4chee-arc/aets/DCM4CHEE/rs',
+        name: 'dicom-web',
+        wadoUriRoot: '/dicom-server/wado',
+        qidoRoot: '/dicom-server/dicom-web',
+        wadoRoot: '/dicom-server/dicom-web',
         qidoSupportsIncludeField: true,
         imageRendering: 'wadors',
         thumbnailRendering: 'wadors',
         enableStudyLazyLoad: true,
+        StudiesMetadata: 'MainDicomTags',
+        SeriesMetadata: "Full",
         supportsFuzzyMatching: true,
+        
       },
     ],
+  },
+  // update the logo to the MIDRC logo
+  whiteLabeling: {
+    createLogoComponentFn: function (React) {
+      return React.createElement('a', {
+        target: '_self',
+        rel: 'noopener noreferrer',
+        className: 'header-brand',
+        href: 'https://data.midrc.org',
+        style: {
+          display: 'block',
+          textIndent: '-9999px',
+          background: 'url(../assets/midrc-logo.png)',
+          backgroundSize: 'contain',
+          backgroundRepeat: 'no-repeat',
+          width: '200px',
+        },
+      });
+    },
   },
 
   // Extensions should be able to suggest default values for these?
