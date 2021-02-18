@@ -58,7 +58,7 @@
     "cornerstone-wado-image-loader": "^3.0.0",
     "dicom-parser": "^1.8.3",
     "gh-pages": "^2.0.1",
-    "i18next": "^17.0.3",
+    "i18next": "^19.8.5",
     "i18next-browser-languagedetector": "^3.0.1",
     "react-i18next": "^10.11.0",
     "react-redux": "^7.1.0",
