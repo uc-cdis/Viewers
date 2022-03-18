@@ -1,21 +1,26 @@
 window.config = {
   // default: '/'
-  routerBasename: '/lw-workspace/proxy/',
+  routerBasename: '/viewer/',
   whiteLabelling: {},
   extensions: [],
   showStudyList: true,
   filterQueryParam: false,
+  disableServersCache: true,
   servers: {
     dicomWeb: [
       {
-        name: 'Orthanc',
-        wadoUriRoot: '/lw-workspace/proxy/dicom-web/wado',
-        qidoRoot: '/lw-workspace/proxy/dicom-web/',
-        wadoRoot: '/lw-workspace/proxy/dicom-web/',
-        qidoSupportsIncludeField: false,
+        name: 'dicom-web',
+        wadoUriRoot: 'https://ramunerella.planx-pla.net/orthanc/wado',          
+        qidoRoot: 'https://ramunerella.planx-pla.net/orthanc/dicom-web',   
+        wadoRoot: 'https://ramunerella.planx-pla.net/orthanc/dicom-web',
+        qidoSupportsIncludeField: true,
         imageRendering: 'wadors',
         thumbnailRendering: 'wadors',
         enableStudyLazyLoad: true,
+        supportsFuzzyMatching: true,
+        requestOptions: { 
+          auth: "orthanc:orthanc"
+        }
       },
     ],
   },
