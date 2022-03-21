@@ -1,6 +1,6 @@
 window.config = {
   // default: '/'
-  routerBasename: '/viewer/',
+  routerBasename: '/dicom-viewer/',
   whiteLabelling: {},
   extensions: [],
   showStudyList: true,
