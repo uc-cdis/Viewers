@@ -10,9 +10,9 @@ window.config = {
     dicomWeb: [
       {
         name: 'dicom-web',
-        wadoUriRoot: 'https://ramunerella.planx-pla.net/orthanc/wado',          
-        qidoRoot: 'https://ramunerella.planx-pla.net/orthanc/dicom-web',   
-        wadoRoot: 'https://ramunerella.planx-pla.net/orthanc/dicom-web',
+        wadoUriRoot: '/orthanc/wado',          
+        qidoRoot: '/orthanc/dicom-web',   
+        wadoRoot: '/orthanc/dicom-web',
         qidoSupportsIncludeField: true,
         imageRendering: 'wadors',
         thumbnailRendering: 'wadors',
