@@ -1,10 +1,10 @@
 window.config = {
   // default: '/'
-  routerBasename: '/lw-workspace/proxy/',
+  routerBasename: '/dicom-viewer/',
   extensions: [],
   showStudyList: true,
   filterQueryParam: false,
-  disableServersCache: false,
+  disableServersCache: true,
   studyPrefetcher: {
     enabled: true,
     order: 'closest',
@@ -19,10 +19,10 @@ window.config = {
     dicomWeb: [
       {
         name: 'Orthanc',
-        wadoUriRoot: '/lw-workspace/proxy/dicom-web/wado',
-        qidoRoot: '/lw-workspace/proxy/dicom-web/',
-        wadoRoot: '/lw-workspace/proxy/dicom-web/',
-        qidoSupportsIncludeField: false,
+        wadoUriRoot: '/orthanc/wado',
+        qidoRoot: '/orthanc/dicom-web',
+        wadoRoot: '/orthanc/dicom-web',
+        qidoSupportsIncludeField: true,
         imageRendering: 'wadors',
         thumbnailRendering: 'wadors',
         enableStudyLazyLoad: true,

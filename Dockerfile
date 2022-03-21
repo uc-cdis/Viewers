@@ -46,7 +46,7 @@ RUN yarn install --verbose
 
 ENV PATH /usr/src/app/node_modules/.bin:$PATH
 ENV QUICK_BUILD true
-ENV PUBLIC_URL /lw-workspace/proxy/
+ENV PUBLIC_URL /dicom-viewer/
 # ENV GENERATE_SOURCEMAP=false
 # ENV REACT_APP_CONFIG=config/default.js
 
