@@ -18,9 +18,6 @@ window.config = {
         thumbnailRendering: 'wadors',
         enableStudyLazyLoad: true,
         supportsFuzzyMatching: true,
-        requestOptions: { 
-          auth: "orthanc:orthanc"
-        }
       },
     ],
   },
