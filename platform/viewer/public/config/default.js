@@ -34,7 +34,7 @@ window.config = {
         style: {
           display: 'block',
           textIndent: '-9999px',
-          background: 'url(/midrc-logo.png)',
+          background: 'url(../assets/midrc-logo.png)',
           backgroundSize: 'contain',
           backgroundRepeat: 'no-repeat',
           width: '200px',
