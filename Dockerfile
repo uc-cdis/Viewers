@@ -50,7 +50,7 @@ ENV PUBLIC_URL /dicom-viewer/
 # ENV GENERATE_SOURCEMAP=false
 # ENV REACT_APP_CONFIG=config/default.js
 
-RUN yarn run build
+RUN NODE_ENV=production yarn run build
 
 # Stage 2: Bundle the built application into a Docker container
 # which runs Nginx using Alpine Linux
