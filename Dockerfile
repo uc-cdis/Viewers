@@ -42,7 +42,7 @@ COPY yarn.lock /usr/src/app/yarn.lock
 RUN apt-get update && apt-get install -y python make g++
 # Run the install before copying the rest of the files
 RUN yarn config set workspaces-experimental true
-RUN NODE_ENV=production yarn install --verbose
+RUN yarn install --verbose
 
 ENV PATH /usr/src/app/node_modules/.bin:$PATH
 ENV QUICK_BUILD true
@@ -50,7 +50,7 @@ ENV PUBLIC_URL /dicom-viewer/
 # ENV GENERATE_SOURCEMAP=false
 # ENV REACT_APP_CONFIG=config/default.js
 
-RUN NODE_ENV=production yarn run build
+RUN yarn run build
 
 # Stage 2: Bundle the built application into a Docker container
 # which runs Nginx using Alpine Linux
