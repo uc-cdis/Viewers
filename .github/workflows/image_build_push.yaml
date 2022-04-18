@@ -5,7 +5,7 @@ on: push
 jobs:
   ci:
     name: Build and push image
-    uses: uc-cdis/.github/.github/workflows/image_build_push.yaml@master
+    uses: uc-cdis/.github/.github/workflows/image_build_push.yaml@paulineribeyre-patch-1
     with:
       OVERRIDE_REPO_NAME: "ohif-viewer"
     secrets:
