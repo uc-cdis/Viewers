@@ -5,7 +5,7 @@ window.config = {
   showStudyList: false,
   filterQueryParam: false,
   disableServersCache: true,
-  disableMeasurementPanel: true,
+  disableMeasurementPanel: false,
   servers: {
     dicomWeb: [
       {
@@ -16,8 +16,9 @@ window.config = {
         qidoSupportsIncludeField: true,
         imageRendering: 'wadors',
         thumbnailRendering: 'wadors',
-        StudiesMetadata: 'MainDicomTags',
         enableStudyLazyLoad: true,
+        StudiesMetadata: 'MainDicomTags',
+        SeriesMetadata: "Full",
         supportsFuzzyMatching: true,
         
       },
