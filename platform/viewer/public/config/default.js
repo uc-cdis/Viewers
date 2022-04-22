@@ -16,6 +16,7 @@ window.config = {
         qidoSupportsIncludeField: true,
         imageRendering: 'wadors',
         thumbnailRendering: 'wadors',
+        enableStudyLazyLoad: true,
         StudiesMetadata: 'MainDicomTags',
         SeriesMetadata: "Full",
         supportsFuzzyMatching: true,
