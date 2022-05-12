@@ -144,7 +144,7 @@ const _showUserMessage = (queryParamApplied, message, dialog = {}) => {
     return;
   }
 
-  const { show: showUserMessage = () => {} } = dialog;
+  const { show: showUserMessage = () => { } } = dialog;
   showUserMessage({
     message,
   });
@@ -416,8 +416,12 @@ function ViewerRetrieveStudyData({
 
   if (error) {
     const content = JSON.stringify(error);
-    if (content.includes('404') || content.includes('NOT_FOUND')) {
+    if (error.status == 404 || content.includes('404') || content.includes('NOT_FOUND')) {
       return <NotFound />;
+    }
+
+    if (error.status == 403) {
+      return <NotFound message="You do not have access to this data" />;
     }
 
     return <NotFound message="Failed to retrieve study data" />;
