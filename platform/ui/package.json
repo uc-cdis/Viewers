@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.5.5",
-    "@ohif/i18n": "^0.2.3",
+    "@ohif/i18n": "^0.53.0",
     "browser-detect": "^0.2.28",
     "classnames": "2.2.6",
     "dom-helpers": "^3.3.1",
