@@ -7,7 +7,9 @@
     "doc": "docs"
   },
   "scripts": {
-    "docs": "gitbook install && gitbook serve"
+    "docs": "gitbook install && gitbook serve",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -36,9 +38,11 @@
     "gitbook-plugin-github": "^3.0.0",
     "gitbook-plugin-sitemap": "^1.2.0",
     "gitbook-plugin-theme-cornerstone": "^1.1.2",
-    "gitbook-plugin-versions": "^2.1.4"
+    "gitbook-plugin-versions": "^2.1.4",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "gitbook-cli": "^2.3.2"
-  }
+  },
+  "snyk": true
 }
