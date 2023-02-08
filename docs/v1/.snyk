@@ -1,0 +1,12 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.25.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:hoek:20180212':
+    - gitbook-cli > npmi > npm > request > hawk > hoek:
+        patched: '2023-02-08T04:59:29.848Z'
+    - gitbook-cli > npmi > npm > request > hawk > boom > hoek:
+        patched: '2023-02-08T04:59:29.848Z'
+    - gitbook-cli > npmi > npm > request > hawk > sntp > hoek:
+        patched: '2023-02-08T04:59:29.848Z'
