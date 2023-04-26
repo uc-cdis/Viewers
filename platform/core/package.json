@@ -48,6 +48,6 @@
     "mathjs": "^10.1.0",
     "mousetrap": "^1.6.3",
     "retry": "^0.12.0",
-    "validate.js": "^0.12.0"
+    "validate.js": "^0.13.1"
   }
 }
