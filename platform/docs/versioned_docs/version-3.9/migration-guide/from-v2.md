@@ -86,6 +86,13 @@ To ensure proper versioning of OHIF v3, we have made a decision to rename the pl
 
 Since the platform/viewer (@ohif/viewer) is already at v4.12.51, we opted to rename it as platform/app to enable versioning in accordance with the product versioning approach. If you were utilizing any exports from @ohif/viewer, please update them to use @ohif/app instead.
 
+## Platform/viewer (@ohif/viewer) -> platform/app (@ohif/app)
+
+
+To ensure proper versioning of OHIF v3, we have made a decision to rename the platform/viewer to platform/app. Previously, the platform/viewer package followed software engineering versioning (currently at v4.12.51). However, going forward, we aim to align the versioning of platform/app with the product version (e.g., v3.4.0, v3.5.0, etc.).
+
+Since the platform/viewer (@ohif/viewer) is already at v4.12.51, we opted to rename it as platform/app to enable versioning in accordance with the product versioning approach. If you were utilizing any exports from @ohif/viewer, please update them to use @ohif/app instead.
+
 
 ## Configuration
 

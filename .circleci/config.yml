@@ -288,7 +288,6 @@ jobs:
             else
               echo "Building and pushing Docker image from the master branch (beta releases)"
               rm -f ./.npmrc
-
               # Set our version number using vars
               export IMAGE_VERSION=$(cat version.txt)
               export IMAGE_VERSION_FULL=v$IMAGE_VERSION
