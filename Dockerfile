@@ -69,6 +69,7 @@ RUN bun install
 # Build here
 # After install it should hopefully be stable until the local directory changes
 ENV QUICK_BUILD true
+ENV PUBLIC_URL /ohif-viewer/
 # ENV GENERATE_SOURCEMAP=false
 ARG APP_CONFIG=config/default.js
 ARG PUBLIC_URL=/
