@@ -54,7 +54,7 @@
     "react-dnd-touch-backend": "^9.4.0",
     "react-draggable": "^4.1.0",
     "react-error-boundary": "^2.2.1",
-    "react-i18next": "^10.11.0",
+    "react-i18next": "^11.8.13",
     "react-modal": "^3.11.1",
     "react-overlays": "^0.8.0",
     "react-transition-group": "2.0.0",
