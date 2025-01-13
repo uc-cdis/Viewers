@@ -15,11 +15,6 @@ const ENTRY = {
 
 const outputName = `ohif-${pkg.name.split('/').pop()}`;
 
-const ENTRY = {
-  app: `${SRC_DIR}/index.tsx`,
-};
-
-
 module.exports = (env, argv) => {
   const commonConfig = webpackCommon(env, argv, { SRC_DIR, DIST_DIR, ENTRY });
 

@@ -9,11 +9,7 @@ services:
       # Project root
       context: ./../../../../
       # Relative to context
-<<<<<<<< HEAD:platform/app/.recipes/Nginx-Orthanc/docker-compose.yml
       dockerfile: ./platform/app/.recipes/Nginx-Orthanc/dockerfile
-========
-      dockerfile: ./platform/app/.recipes/OpenResty-Orthanc/dockerfile
->>>>>>>> 16afa740b6 (feat(app): change ohif viewer to ohif app (#3451)):platform/app/.recipes/OpenResty-Orthanc/docker-compose.yml
     image: webapp:latest
     container_name: ohif_orthanc
     volumes:
