@@ -69,10 +69,10 @@ RUN bun install
 # Build here
 # After install it should hopefully be stable until the local directory changes
 ENV QUICK_BUILD true
-ENV PUBLIC_URL /ohif-viewer/
 # ENV GENERATE_SOURCEMAP=false
 ARG APP_CONFIG=config/default.js
-ARG PUBLIC_URL=/
+ARG PUBLIC_URL=/ohif-viewer/
+ENV PUBLIC_URL=${PUBLIC_URL}
 
 RUN bun run show:config
 RUN bun run build
@@ -87,7 +87,7 @@ FROM nginxinc/nginx-unprivileged:1.27-alpine as final
 #RUN apk add --no-cache bash
 ENV PORT=8080
 ENV PORT=${PORT}
-ARG PUBLIC_URL=/
+ARG PUBLIC_URL=/ohif-viewer/
 ENV PUBLIC_URL=${PUBLIC_URL}
 RUN rm /etc/nginx/conf.d/default.conf
 USER nginx
