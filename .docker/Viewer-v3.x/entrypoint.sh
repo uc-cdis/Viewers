@@ -9,18 +9,18 @@ fi
 
 
 if [ -n "$APP_CONFIG" ]; then
-  echo "$APP_CONFIG" > /usr/share/nginx/html${PUBLIC_URL}app-config.js
+  echo "$APP_CONFIG" > /usr/share/nginx/html/app-config.js
   echo "Using custom APP_CONFIG environment variable"
 else
   echo "Not using custom APP_CONFIG"
 fi
 
-if [ -f /usr/share/nginx/html${PUBLIC_URL}app-config.js ]; then
-  if [ -s /usr/share/nginx/html${PUBLIC_URL}app-config.js ]; then
+if [ -f /usr/share/nginx/html/app-config.js ]; then
+  if [ -s /usr/share/nginx/html/app-config.js ]; then
     echo "Detected non-empty app-config.js. Ensuring .gz file is updated..."
-    rm -f /usr/share/nginx/html${PUBLIC_URL}app-config.js.gz
-    gzip /usr/share/nginx/html${PUBLIC_URL}app-config.js
-    touch /usr/share/nginx/html${PUBLIC_URL}app-config.js
+    rm -f /usr/share/nginx/html/app-config.js.gz
+    gzip /usr/share/nginx/html/app-config.js
+    touch /usr/share/nginx/html/app-config.js
     echo "Compressed app-config.js to app-config.js.gz"
   else
     echo "app-config.js is empty. Skipping compression."
