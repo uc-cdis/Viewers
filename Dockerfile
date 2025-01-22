@@ -69,6 +69,7 @@ RUN bun install
 # Build here
 # After install it should hopefully be stable until the local directory changes
 ENV QUICK_BUILD true
+ENV PUBLIC_URL /ohif-viewer/
 # ENV GENERATE_SOURCEMAP=false
 ARG APP_CONFIG=config/default.js
 ARG PUBLIC_URL=/
@@ -84,10 +85,7 @@ RUN ./.docker/compressDist.sh
 # which runs Nginx using Alpine Linux
 FROM nginxinc/nginx-unprivileged:1.27-alpine as final
 #RUN apk add --no-cache bash
-ARG PORT=80
-ENV PORT=${PORT}
-ARG PUBLIC_URL=/
-ENV PUBLIC_URL=${PUBLIC_URL}
+ENV PORT=80
 RUN rm /etc/nginx/conf.d/default.conf
 USER nginx
 COPY --chown=nginx:nginx .docker/Viewer-v3.x /usr/src
