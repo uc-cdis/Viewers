@@ -74,7 +74,6 @@ RUN yarn run build
 FROM quay.io/cdis/python-nginx-al:master AS final
 #RUN apk add --no-cache bash
 ENV PORT=8080
-RUN rm /etc/nginx/conf.d/default.conf
 USER nginx
 COPY --chown=nginx:nginx .docker/Viewer-v3.x /usr/src
 RUN chmod 777 /usr/src/entrypoint.sh
