@@ -74,14 +74,20 @@ RUN yarn run build
 FROM quay.io/cdis/python-nginx-al:master AS final
 #RUN apk add --no-cache bash
 ENV PORT=8080
-USER nginx
-COPY --chown=nginx:nginx .docker/Viewer-v3.x /usr/src
+USER gen3
+COPY --chown=gen3:gen3 .docker/Viewer-v3.x /usr/src
 RUN chmod 777 /usr/src/entrypoint.sh
 COPY --from=builder /usr/src/app/platform/app/dist /usr/share/nginx/html
 # In entrypoint.sh, app-config.js might be overwritten, so chmod it to be writeable.
 # The nginx user cannot chmod it, so change to root.
 USER root
-RUN chmod 666 /usr/share/nginx/html/app-config.js
-USER nginx
+RUN chmod 666 /usr/share/nginx/html/app-config.js && \
+    chmod 664 /etc/nginx/* && \
+    chmod 775 /etc/nginx/conf.d && \
+    chown -R gen3:root /etc/nginx && \
+    yum install -y gettext && \
+    yum clean all
+
+USER gen3
 ENTRYPOINT ["/usr/src/entrypoint.sh"]
 CMD ["nginx", "-g", "daemon off;"]
