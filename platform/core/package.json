@@ -54,6 +54,6 @@
     "validate.js": "^0.12.0"
   },
   "devDependencies": {
-    "webpack-merge": "5.7.3"
+    "webpack-merge": "5.10.0"
   }
 }
