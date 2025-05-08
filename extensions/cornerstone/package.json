@@ -48,7 +48,7 @@
     "styled-components": "^5.3.5"
   },
   "dependencies": {
-    "@babel/runtime": "^7.5.5",
+    "@babel/runtime": "^7.26.10",
     "classnames": "^2.2.6",
     "lodash.merge": "^4.6.2",
     "lodash.throttle": "^4.1.1",
