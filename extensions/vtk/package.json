@@ -48,7 +48,7 @@
     "redux": "^4.0.1"
   },
   "dependencies": {
-    "@babel/runtime": "^7.5.5",
+    "@babel/runtime": "^7.26.10",
     "lodash.throttle": "^4.1.1",
     "react-vtkjs-viewport": "^0.14.5"
   },
