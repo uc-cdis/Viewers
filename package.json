@@ -42,7 +42,7 @@
     "link-list": "npm ls --depth=0 --link=true"
   },
   "dependencies": {
-    "@babel/runtime": "^7.5.5",
+    "@babel/runtime": "^7.26.10",
     "core-js": "^3.2.1"
   },
   "devDependencies": {
