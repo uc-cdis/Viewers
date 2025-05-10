@@ -36,12 +36,12 @@
     "react-i18next": "^10.11.0"
   },
   "dependencies": {
-    "@babel/runtime": "^7.5.5",
+    "@babel/runtime": "^7.26.10",
     "@ohif/i18n": "^0.2.3",
     "browser-detect": "^0.2.28",
     "classnames": "2.2.6",
     "dom-helpers": "^3.3.1",
-    "i18next": "^17.0.3",
+    "i18next": "^24.2.3",
     "i18next-browser-languagedetector": "^3.0.1",
     "lodash.debounce": "^4.0.8",
     "lodash.isequal": "4.5.0",
