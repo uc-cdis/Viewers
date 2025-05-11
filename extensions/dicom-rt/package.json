@@ -39,7 +39,7 @@
     "react-tooltip": "4.2.10"
   },
   "dependencies": {
-    "@babel/runtime": "^7.5.5",
-    "react-select": "^3.0.8"
+    "@babel/runtime": "^7.26.10",
+    "react-select": "^4.0.0"
   }
 }
